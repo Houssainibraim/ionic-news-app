@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home - Best Articles about bitcoin
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let article of datas?.articles" (click)="onGoToSinglePage(article)" >
+    <ion-img [src]="article.urlToImage"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{article.title}}</ion-card-title>
+      <p>
+        {{article.content}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

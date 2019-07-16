@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+    <ion-button (click)="back()"><ion-icon name="arrow-back" ></ion-icon></ion-button> Business
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let article of newsArray" (click)="onGoToSinglePage(article)" >
+    <ion-img [src]="article.urlToImage"></ion-img>
+    <ion-card-content>
+      <ion-card-title>{{article.title}}</ion-card-title>
+      <p>
+        {{article.content}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
